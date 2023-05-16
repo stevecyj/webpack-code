@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports  = {
 //   入口
-entry: './src/index.js',
+entry: './src/main.js',
 //   輸出
 output: {
   path: path.resolve(__dirname, 'dist'),
