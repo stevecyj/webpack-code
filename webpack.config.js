@@ -1,11 +1,16 @@
 const path = require('path');
 
 module.exports = {
-  //   入口(相對路徑 )
+  /**
+   * 入口(相對路徑)
+   */
   entry: './src/main.js',
-  //   輸出
+  /**
+   * 輸出路徑
+   * __dirname: 當前目錄
+   * path.resolve: 解析路徑()
+   */
   output: {
-    // 輸出路徑(絕對)
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
