@@ -9,22 +9,29 @@ module.exports = {
    * 輸出路徑
    * __dirname: 當前目錄
    * path.resolve: 解析路徑()
+   * filename: 輸出檔名
    */
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
-  //   loader
+  /**
+   * loader
+   */
   module: {
     rules: [
       //     loader config
     ],
   },
-  //   plugins
+  /**
+   * plugins
+   */
   plugins: [
     //   plugins config
   ],
-  //   mode
+  /**
+   * mode
+   */
   mode: 'development',
   // mode: 'production',
 };
