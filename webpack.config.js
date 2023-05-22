@@ -21,6 +21,7 @@ module.exports = {
   module: {
     rules: [
       //     loader config
+      // 匹配.css文件，use 執行順序由右到左、由下到上
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],
   },
