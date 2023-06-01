@@ -14,6 +14,9 @@ module.exports = {
    * filename: 輸出檔名
    */
   output: {
+    /**
+     * 所有檔案輸出路徑
+     */
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   },
