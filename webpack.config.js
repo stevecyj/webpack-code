@@ -55,6 +55,7 @@ module.exports = {
   devServer: {
     port: 8080,
     open: true,
+    hot: true, // 開啟 HMR 支持
     client: {
       logging: 'info',
       overlay: true
