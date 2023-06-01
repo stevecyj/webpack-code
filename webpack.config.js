@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   /**
@@ -13,7 +13,7 @@ module.exports = {
    */
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: 'main.js'
   },
   /**
    * loader
@@ -26,11 +26,11 @@ module.exports = {
       { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
       {
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       { test: /\.styl$/, use: ['style-loader', 'css-loader', 'stylus-loader'] },
-      { test: /\.(png|gif|jpe?g|webp)$/, type: 'asset' },
-    ],
+      { test: /\.(png|gif|jpe?g|webp)$/, type: 'asset' }
+    ]
   },
   /**
    * plugins
@@ -41,6 +41,6 @@ module.exports = {
   /**
    * mode
    */
-  mode: 'development',
+  mode: 'development'
   // mode: 'production',
-};
+}
