@@ -50,6 +50,10 @@ module.exports = {
   /**
    * mode
    */
-  mode: 'development'
+  mode: 'development',
   // mode: 'production',
+  devServer: {
+    port: 8080,
+    open: true
+  }
 }
