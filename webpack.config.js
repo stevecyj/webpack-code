@@ -54,6 +54,13 @@ module.exports = {
   // mode: 'production',
   devServer: {
     port: 8080,
-    open: true
-  }
+    open: true,
+    client: {
+      logging: 'info',
+      overlay: true
+    },
+    compress: true,
+    host: '0.0.0.0' // 允許本地網路下設備進行訪問
+  },
+  stats: 'errors-only'
 }
