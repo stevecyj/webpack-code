@@ -18,7 +18,8 @@ module.exports = {
      * 所有檔案輸出路徑
      */
     path: path.resolve(__dirname, 'dist'),
-    filename: 'static/js/main.js'
+    filename: 'static/js/main.js',
+    clean: true // 清除舊檔案
   },
   /**
    * loader
