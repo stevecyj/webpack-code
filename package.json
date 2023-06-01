@@ -8,6 +8,18 @@
     "lint": "eslint --fix",
     "prettier": "prettier --config ./.prettierrc --write ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**.{js,jsx}": [
+      "npm run prettier",
+      "npm run lint",
+      "git add ."
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

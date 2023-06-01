@@ -6,6 +6,4 @@ README.md
 .prettierrc
 .prettierignore
 .eslintrc.js
-package.json
-package-lock.json
 
