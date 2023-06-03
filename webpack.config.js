@@ -47,6 +47,14 @@ module.exports = {
           // [query]: 添加之前的query参数
           filename: 'static/imgs/[hash:8][ext][query]'
         }
+      },
+      {
+        test: /\.(ttf|woff2?)$/,
+        type: 'asset/resource',
+        generator: {
+          // 命名 [hash:8][ext][query]
+          filename: 'static/media/[hash:8][ext][query]'
+        }
       }
     ]
   },
