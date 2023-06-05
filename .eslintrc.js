@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     browser: true,
+    node:true,
     es2021: true
   },
   extends: ['eslint:recommended', 'prettier'],
@@ -16,7 +17,8 @@ module.exports = {
     'webpack.config.js'
   ],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    "no-var": "error",
   },
   plugins: ['prettier']
 }
