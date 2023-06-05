@@ -1,4 +1,5 @@
 const path = require('path')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -63,6 +64,10 @@ module.exports = {
    */
   plugins: [
     //   plugins config
+    new ESLintPlugin({
+      // 檢查檔案位置
+      context: path.resolve(__dirname, 'src')
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
