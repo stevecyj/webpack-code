@@ -49,7 +49,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|woff2?)$/,
+        test: /\.(ttf|woff2?|mp3|mp4)$/,
         type: 'asset/resource',
         generator: {
           // 命名 [hash:8][ext][query]
