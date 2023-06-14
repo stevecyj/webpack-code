@@ -18,7 +18,7 @@ module.exports = {
     /**
      * 所有檔案輸出路徑
      */
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'static/js/main.js',
     clean: true // 清除舊檔案
   },
@@ -77,31 +77,19 @@ module.exports = {
     //   plugins config
     new ESLintPlugin({
       // 檢查檔案位置
-      context: path.resolve(__dirname, 'src')
+      context: path.resolve(__dirname, '../src')
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: path.resolve(__dirname, '../public/index.html'),
       filename: 'index.html'
     })
   ],
   /**
    * mode
    */
-  mode: 'development',
-  // mode: 'production',
-  devServer: {
-    port: 8080,
-    open: true,
-    hot: true, // 開啟 HMR 支持
-    client: {
-      logging: 'info',
-      overlay: true
-    },
-    compress: true,
-    host: '0.0.0.0' // 允許本地網路下設備進行訪問
-  },
+  mode: 'production',
   stats: 'errors-only'
 }
