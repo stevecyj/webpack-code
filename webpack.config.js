@@ -56,6 +56,17 @@ module.exports = {
           // 命名 [hash:8][ext][query]
           filename: 'static/media/[hash:8][ext][query]'
         }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, // 排除 node_modules 目錄
+        use: {
+          loader: 'babel-loader'
+          // options: {
+          //   presets: ['@babel/preset-env']
+          // 移出，寫在 babel.config.js
+          // }
+        }
       }
     ]
   },
