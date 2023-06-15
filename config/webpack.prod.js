@@ -29,13 +29,19 @@ module.exports = {
     rules: [
       //     loader config
       // 匹配.css文件，use 執行順序由右到左、由下到上
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
+      {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+      },
       {
         test: /\.s[ac]ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
-      { test: /\.styl$/, use: ['style-loader', 'css-loader', 'stylus-loader'] },
+      {
+        test: /\.styl$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
+      },
       {
         test: /\.(png|gif|jpe?g|webp)$/,
         type: 'asset',
@@ -80,7 +86,7 @@ module.exports = {
       context: path.resolve(__dirname, '../src')
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      filename: 'static/css/[name].css'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html'),
