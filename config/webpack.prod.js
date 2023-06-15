@@ -29,18 +29,76 @@ module.exports = {
     rules: [
       //     loader config
       // 匹配.css文件，use 執行順序由右到左、由下到上
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env' // 能解决大多数样式兼容性问题
+                ]
+              }
+            }
+          }
+        ]
+      },
       {
         test: /\.less$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env' // 能解决大多数样式兼容性问题
+                ]
+              }
+            }
+          },
+          'less-loader'
+        ]
       },
       {
         test: /\.s[ac]ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env' // 能解决大多数样式兼容性问题
+                ]
+              }
+            }
+          },
+          'sass-loader'
+        ]
       },
       {
         test: /\.styl$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env' // 能解决大多数样式兼容性问题
+                ]
+              }
+            }
+          },
+          'stylus-loader'
+        ]
       },
       {
         test: /\.(png|gif|jpe?g|webp)$/,

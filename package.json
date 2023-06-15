@@ -45,6 +45,9 @@
     "less-loader": "^11.1.0",
     "lint-staged": "^13.2.2",
     "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^8.5.0",
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
@@ -54,5 +57,10 @@
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
 }
